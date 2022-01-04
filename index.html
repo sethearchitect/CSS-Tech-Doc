@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en"
+  dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+      href="styles.css">
+
+    <script src="https://use.fontawesome.com/7e19710f06.js"></script>
+    <title>SE CSS Documentation</title>
+  </head>
+
+  <body>
+
+    <nav id="navbar">
+      <header>
+        <h1>SE's CSS Technical Documentation</h1>
+        <ul>
+          <li><a href="#introduction"
+              class="nav-link">Introduction</a></li>
+
+          <li><a href="#syntax"
+              class="nav-link">Syntax</a></li>
+
+          <li><a href="#adding_css_to_pages"
+              class="nav-link">Adding CSS To Pages</a></li>
+
+          <li><a href="#css_selectors"
+              class="nav-link">CSS Selectors</a></li>
+
+          <li><a href="#css_properties"
+              class="nav-link">CSS Properties</a></li>
+
+          <li><a href="#css_functions"
+              class="nav-link">CSS Functions</a></li>
+
+          <li><a href="#css_effects"
+              class="nav-link">Css Effects</a></li>
+
+          <li><a href="#media_queries"
+              class="nav-link">Media Queries</a></li>
+
+          <li><a href="#references"
+              class="nav-link">References</a></li>
+        </ul>
+      </header>
+    </nav>
+    <main class=""
+      id="main-doc">
+      <section id="introduction"
+        class="main-section">
+        <article class="">
+
+          <header>
+            <h2>Introduction</h2>
+          </header>
+
+          <p>CSS is the language we use to style a Web page. It stands for Cascading Style Sheets
+            and we use it to describe how HTML appears on screens, paper, or any other media.</p>
+          <h4>CSS is used to define</h4>
+          <ul>
+            <li>The design of your web pages</li>
+            <li>The layout of your pages and</li>
+            <li>The various displays for different screen sizes and devices</li>
+          </ul>
+          <h4>Why is CSS important?</h4>
+          <p>Before CSS came, the styling of web pages were done in the HTML file and this could get very tedious and messy,
+            especially as your project becomes bigger over time</p>
+          <p>CSS introduced division of labor and provided a way to remove the style formatting from the HTML file,
+            so your HTML can simply focus on just defining the structure of your web pages. As most stylesheets are
+            typically saved in external .css files, we are now able to keep our HTML docs clean, sweet, and easy to read.</p>
+          <p>CSS also gives you the power to change the whole look of an entire website by changing just one file!</p>
+        </article>
+
+      </section>
+
+
+      <section id="syntax"
+        class="main-section">
+        <article class="">
+
+          <header>
+            <h2>Syntax</h2>
+          </header>
+          <span>
+            <p>h1</p>
+            <p>{color: blue; text-align: center;}</p>
+          </span>
+
+          <h4>The CSS syntax</h4>
+          <p>CSS syntax is made up of the following parts</p>
+          <ul>
+            <li>a selector</li>
+            <li>a declaration</li>
+            <li>properties</li>
+            <li>values</li>
+          </ul>
+          <p>The selector is a like a hook that points and attaches to the HTML element you want to style</p>
+          <p>A declaration is a combination of a property and a value for that property, seperated by a colon <span class="inline-em">[:]</span>.
+            when we have more than one declaration passed on a selector, its called a declaration block. A declaration block
+            can have as many declarations surrounded by curly braces <span class="inline-em">[{}]</span>. In a declaration block, each of the declarations
+            must end with a semi-colon <span class="inline-em">[;]</span> before another declaration starts.</p>
+
+          <div>
+            <h5>Example</h5>
+            <p>A selector with a single declaration</p>
+            <span class="code-sec">
+              <code>
+                p {color: red;}
+              </code>
+            </span>
+            <p>A selector with a declaration block:</p>
+            <span class="code-sec">
+              <code>
+                p {<br>
+                color: red; <br>
+                font-size: 2px;<br>
+                font-family: 'Arial', sans-serif;<br>
+                }
+              </code>
+            </span>
+          </div>
+          <ul>
+            <li><code>p</code> is a CSS selector that points to the element in the HTML file you want to style</li>
+            <li><code>color</code> is a CSS property, and <code>red</code> is the CSS value we want that property to have</li>
+            <li><code>font-size</code> is a CSS property as well, <code>2px</code> is a CSS value</li>
+            <li><code>font-family</code> is a CSS property, <code>'Arial', sans-serif</code> are the CSS values we want this property to have.
+              You will learn more about what's happening here in the coming sections.</li>
+          </ul>
+
+        </article>
+
+      </section>
+
+      <section id="css_selectors"
+        class="main-section">
+        <article class="">
+          <header>
+            <h2>CSS Selectors</h2>
+          </header>
+
+          <p>CSS selectors are used to "find" or hook unto the HTML elements you want to style (edit).
+            CSS selectors are grouped into five categories:</p>
+          <ul>
+            <li>Simple selectors (select elements based on name, id, class)
+              <ul>
+                <li>
+                  <h4>The CSS element selector</h4>
+                  <p>The element selector selects HTML elements based on the element name.</p>
+                  <div>
+                    <h5>Example</h5>
+                    <span class="code-sec">
+                      <code>
+                        p { <br>
+                        text-align: center; <br>
+                        color: red; <br>
+                        }
+                      </code>
+                    </span>
+                    <p>Here, all < p> elements on the page will be center-aligned, with a red text color</p>
+                  </div>
+                </li>
+
+                <li>
+                  <h4>The CSS id selector</h4>
+                  <p>The id selector uses the <span class="inline-em">id</span> attribute of an HTML element to select a specific element.</p>
+                  <p>The id of an element is unique within a page, so the id selector is used to select one unique element!</p>
+                  <p>To select an element with a specific id, write a hash (#) character, followed by the id of the element.</p>
+                  <div>
+                    <h5>Example</h5>
+                    <span class="code-sec">
+                      <code>
+                        #paragraph1 { <br>
+                        text-align: center; <br>
+                        color: red; <br>
+                        }
+                      </code>
+                    </span>
+                    <p>This CSS rule will be applied to the HTML element with id="para1":</p>
+                  </div>
+                </li>
+
+                <li>
+                  <h4>The CSS class selector</h4>
+                  <p>The class selector selects HTML elements with a specific <span class="inline-em">class</span> attribute.</p>
+                  <p>To select elements with a specific class, write a period (.) character, followed by the class name.</p>
+                  <div>
+                    <h5>Example</h5>
+                    <span class="code-sec">
+                      <code>
+                        .bugger { <br>
+                        text-align: center; <br>
+                        color: red; <br>
+                        }
+                      </code>
+                    </span>
+                    <p>The HTML element(s) with <span class="inline-em">class="bugger"</span> will be red and center aligned</p>
+                  </div>
+
+                  <p>More than one class can refer to a HTML element.</p>
+                  <div>
+                    <h5>Example</h5>
+                    <span class="code-sec">
+                      <code>
+                        < p
+                          class="center large" /> This paragraph refers to two classes.< /p>
+                      </code>
+                    </span>
+                    <p>In this example the < p> element will be styled according to <span class="inline-em">class="center"</span> and to <span class="inline-em">class="large"</span></p>
+                  </div>
+
+                  <p>You can also specify that only specific HTML elements should be affected by a class.</p>
+                  <div>
+                    <h5>Example</h5>
+                    <span class="code-sec">
+                      <code>
+                        p.bugger { <br>
+                        text-align: center; <br>
+                        }
+                      </code>
+                    </span>
+                    <p>
+                      < p> element(s) with <span class="inline-em">class="bugger"</span> will be center aligned
+                    </p>
+                </li>
+              </ul>
+            </li>
+            <p>Other categories of selectors include:</p>
+            <li>
+              <a href="https://www.w3schools.com/css/css_combinators.asp">Combinator selectors</a> (select elements based on a specific relationship between them)
+            </li>
+            <li><a href="https://www.w3schools.com/css/css_pseudo_classes.asp">Pseudo-class Selectors</a> (select elements based on a certain state)</li>
+            <li><a href="https://www.w3schools.com/css/css_pseudo_elements.asp">Pseudo-element Selectors</a> (select and style a part of an element)</li>
+            <li><a href="https://www.w3schools.com/css/css_attribute_selectors.asp">Attribute Selectors</a> (select elements based on an attribute or attribute value)</li>
+          </ul>
+          <h4>All the simple CSS selectors</h4>
+          <table>
+            <tr>
+              <th>Selector</th>
+              <th>Example</th>
+              <th>Exanple description</th>
+            </tr>
+
+            <tr>
+              <td>
+                <em>
+                  <a href="https://www.w3schools.com/cssref/sel_id.asp">#id</a>
+                </em>
+              </td>
+              <td>#navbar</td>
+              <td>Selects the element with id= "navbar"</td>
+            </tr>
+            <tr>
+              <td>
+                <em>
+                  <a href="https://www.w3schools.com/cssref/sel_class.asp">.class</a>
+                </em>
+              </td>
+              <td>.body-link</td>
+              <td>Selects all the elements with class="body-link"</td>
+            </tr>
+            <tr>
+              <td>
+                <em>
+                  <a href="https://www.w3schools.com/cssref/sel_element_class.asp">element.class</a>
+                </em>
+              </td>
+              <td>p.intro </td>
+              <td>Selects only the <code>
+                  < p>
+                </code> elements with the class="intro" </td>
+            </tr>
+            <tr>
+              <td>
+                <em>
+                  <a href="https://www.w3schools.com/cssref/sel_all.asp">*</a>
+                </em>
+              </td>
+              <td>*</td>
+              <td>Selects all elements</td>
+            </tr>
+            <tr>
+              <td>
+                <em>
+                  <a href="https://www.w3schools.com/cssref/sel_element.asp">element</a>
+                </em>
+              </td>
+              <td>p</td>
+              <td>Select all < p> elements</td>
+            </tr>
+
+            <tr>
+              <td>
+                <em>
+                  <a href="https://www.w3schools.com/cssref/sel_element_comma.asp">element,element,...</a>
+                </em>
+              </td>
+              <td>div,p</td>
+              <td>Selects all < div> elements and all < p> elements</td>
+            </tr>
+          </table>
+        </article>
+      </section>
+
+      <section id="css_properties"
+        class="main-section">
+        <article class="">
+          <header>
+            <h2>CSS Properties</h2>
+          </header>
+
+          <p>CSS properties are keywords you use to define individual properties of elements</p>
+          <p>some of the most popular CSS properties you will come across often includes:</p>
+          <ul>
+            <li>
+              <a href="https://www.w3schools.com/css/css_colors.asp">CSS Colors</a>
+            </li>
+            <li>
+              <a href="https://www.w3schools.com/css/css_background.asp"
+                target="-_blank">CSS Backgrounds</a>
+            </li>
+            <li>
+              <a href="https://www.w3schools.com/css/css_border.asp"
+                target="-_blank">CSS Borders</a>
+            </li>
+            <li>
+              <a href="https://www.w3schools.com/css/css_margin.asp"
+                target="-_blank">CSS Margins</a>
+            </li>
+            <li>
+              <a href="https://www.w3schools.com/css/css_padding.asp"
+                target="-_blank">CSS Padding</a>
+            </li>
+            <li>
+              <a href="https://www.w3schools.com/css/css_dimension.asp"
+                target="-_blank">CSS Height/Width</a>
+            </li>
+            <li>
+              <a href="https://www.w3schools.com/css/css_font.asp"
+                target="-_blank">CSS Fonts</a>
+            </li>
+            <li>
+              <a href="https://www.w3schools.com/css/css_text.asp"
+                target="-_blank">CSS Text</a>
+            </li>
+            <li>
+              <a href="https://www.w3schools.com/css/css_positioning.asp"
+                target="-_blank">CSS Position</a>
+            </li>
+            <li>
+              <a href="https://www.w3schools.com/css/css_display_visibility.asp"
+                target="-_blank">CSS Display</a>
+            </li>
+          </ul>
+          <p>This is not an exhuastive list. There are many other CSS properties
+            you will come across as you work with CSS</p>
+        </article>
+
+      </section>
+
+      <section id="adding_css_to_pages"
+        class="main-section">
+        <article class="">
+          <header>
+            <h2>Adding CSS To Pages</h2>
+          </header>
+
+          <p>We use stylesheets to direct browsers on how to display HTML documents.
+            But since we mentioned earlier that CSS helped us seperate styles from the structure of our Pages
+            the question becomes how do we connect our HTML doc with our stylesheets?</p>
+          <h3>There are three ways to add CSS to your HTML</h3>
+          <ul>
+            <li>
+              <h4>External CSS</h4>
+
+              <p>With an external style sheet, you can change the look of an entire website by changing just one file!</p>
+
+              <p>Each HTML page must include a reference to the external style sheet file using the
+                < link> element, inside the head section.
+              </p>
+              <div class="">
+                <h5>Example</h5>
+                <p>External styles are defined within the
+                  < link> element, inside the
+
+                    < head> section of an HTML page:
+                </p>
+                <span class="code-sec">
+                  <code>
+                    <!DOCTYPE html><br>
+                    < html><br>
+
+                      < head><br>
+                        < link
+                          rel="stylesheet"
+                          href="mystyle.css"><br>
+                          < /head><br>
+
+                            < body><br>
+
+                              < h1>This is a heading< /h1><br>
+                                  < p>This is a paragraph.< /p><br>
+
+                                      < /body><br>
+
+                                        < /html><br>
+                  </code>
+                </span>
+
+                <p>An external style sheet can be written in any text editor, and must be saved with a .css extension.</p>
+                <p>The external .css file should not contain any HTML tags.</p>
+
+                <p>Here is how the "mystyle.css" file looks:</p>
+
+                <div class="">
+                  <h5>mystyle.css</h5>
+                  <span class="code-sec">
+                    <code>
+                      body { <br>
+                      background-color: lightblue; <br>
+                      } <br><br>
+
+                      h1 { <br>
+                      color: navy; <br>
+                      margin-left: 20px; <br>
+                      }
+                    </code>
+                  </span>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <h4>Internal CSS</h4>
+              <p>An internal style sheet may be used if one single HTML page has a unique style.</p>
+              <p>The internal style is defined inside the < style> element, inside the head section.</p>
+              <div class="">
+                <h5>Example</h5>
+                <p>Internal styles are defined within the < style> element, inside the < head> section of an HTML page:</p>
+                <span class="code-sec">
+                  <code>
+                    <!DOCTYPE html><br>
+                    < html><br>
+
+                      < head><br>
+                        < style><br>
+                          body {<br>
+                          background-color: linen;<br>
+                          }<br>
+
+                          h1 {<br>
+                          color: maroon;<br>
+                          margin-left: 40px;<br>
+                          }<br>
+                          < /style><br>
+                            < /head><br>
+
+                              < body><br>
+
+                                < h1>This is a heading< /h1><br>
+                                    < p>This is a paragraph.< /p><br>
+
+                                        < /body><br>
+
+                                          < /html>
+                  </code>
+                </span>
+
+              </div>
+            </li>
+
+            <li>
+              <h4>Inline CSS</h4>
+              <p>An inline style may be used to apply a unique style for a single element.</p>
+              <p>To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property.</p>
+
+              <div class="">
+                <h5>Example</h5>
+                <p>Inline styles are defined within the "style" attribute of the relevant element:</p>
+                <span>
+                  <code>
+                    <!DOCTYPE html><br>
+                    < html><br>
+
+                      < body><br>
+
+                        < h1
+                          style="color:blue;text-align:center;">This is a heading</h1><br>
+                          < p
+                            style="color:red;">This is a paragraph.</p><br>
+
+                            < /body><br>
+
+                              < /html>
+                  </code>
+                </span>
+
+              </div>
+            </li>
+          </ul>
+          <p>Visit <a href="https://www.w3schools.com/css/css_howto.asp">w3schools</a> for additonal notes on inserting CSS in HTML docs</p>
+        </article>
+      </section>
+
+      <section id="css_functions"
+        class="main-section">
+        <header>
+          <h2>CSS Functions</h2>
+        </header>
+      </section>
+
+      <section id="css_effects"
+        class="main-section">
+        <header>
+          <h2>CSS Effects</h2>
+        </header>
+      </section>
+      <section id="media_queries"
+        class="main-section">
+        <header>
+          <h2>Media Queries</h2>
+        </header>
+      </section>
+
+      <section id="references"
+        class="main-section">
+        <header>
+          <h2>References</h2>
+        </header>
+      </section>
+
+    </main>
+
+  </body>
+
+</html>
