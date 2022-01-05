@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport"
       content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins&display=swap"
+      rel="stylesheet">
     <link rel="stylesheet"
       href="styles.css">
 
@@ -17,46 +19,39 @@
 
     <nav id="navbar">
       <header>
-        <h1>SE's CSS Technical Documentation</h1>
-        <ul>
-          <li><a href="#introduction"
-              class="nav-link">Introduction</a></li>
-
-          <li><a href="#syntax"
-              class="nav-link">Syntax</a></li>
-
-          <li><a href="#adding_css_to_pages"
-              class="nav-link">Adding CSS To Pages</a></li>
-
-          <li><a href="#css_selectors"
-              class="nav-link">CSS Selectors</a></li>
-
-          <li><a href="#css_properties"
-              class="nav-link">CSS Properties</a></li>
-
-          <li><a href="#css_functions"
-              class="nav-link">CSS Functions</a></li>
-
-          <li><a href="#css_effects"
-              class="nav-link">Css Effects</a></li>
-
-          <li><a href="#media_queries"
-              class="nav-link">Media Queries</a></li>
-
-          <li><a href="#references"
-              class="nav-link">References</a></li>
-        </ul>
+        <h1>CSS Documentation</h1>
       </header>
+      <ul class="no-ul">
+        <li><a href="#introduction"
+            class="nav-link">Introduction</a></li>
+
+        <li><a href="#syntax"
+            class="nav-link">Syntax</a></li>
+
+        <li><a href="#adding_css_to_pages"
+            class="nav-link">Adding CSS To Pages</a></li>
+
+        <li><a href="#css_selectors"
+            class="nav-link">CSS Selectors</a></li>
+
+        <li><a href="#css_properties"
+            class="nav-link">CSS Properties</a></li>
+
+        <li><a href="#css_functions"
+            class="nav-link">CSS Functions</a></li>
+
+        <li><a href="#references"
+            class="nav-link">References</a></li>
+      </ul>
     </nav>
     <main class=""
       id="main-doc">
       <section id="introduction"
         class="main-section">
+        <header>
+          <h2>Introduction</h2>
+        </header>
         <article class="">
-
-          <header>
-            <h2>Introduction</h2>
-          </header>
 
           <p>CSS is the language we use to style a Web page. It stands for Cascading Style Sheets
             and we use it to describe how HTML appears on screens, paper, or any other media.</p>
@@ -80,11 +75,10 @@
 
       <section id="syntax"
         class="main-section">
+        <header>
+          <h2>Syntax</h2>
+        </header>
         <article class="">
-
-          <header>
-            <h2>Syntax</h2>
-          </header>
           <span>
             <p>h1</p>
             <p>{color: blue; text-align: center;}</p>
@@ -137,96 +131,93 @@
 
       <section id="css_selectors"
         class="main-section">
+        <header>
+          <h2>CSS Selectors</h2>
+        </header>
         <article class="">
-          <header>
-            <h2>CSS Selectors</h2>
-          </header>
-
           <p>CSS selectors are used to "find" or hook unto the HTML elements you want to style (edit).
             CSS selectors are grouped into five categories:</p>
           <ul>
             <li>Simple selectors (select elements based on name, id, class)
-              <ul>
-                <li>
-                  <h4>The CSS element selector</h4>
-                  <p>The element selector selects HTML elements based on the element name.</p>
-                  <div>
-                    <h5>Example</h5>
-                    <span class="code-sec">
-                      <code>
-                        p { <br>
-                        text-align: center; <br>
-                        color: red; <br>
-                        }
-                      </code>
-                    </span>
-                    <p>Here, all < p> elements on the page will be center-aligned, with a red text color</p>
-                  </div>
-                </li>
 
-                <li>
-                  <h4>The CSS id selector</h4>
-                  <p>The id selector uses the <span class="inline-em">id</span> attribute of an HTML element to select a specific element.</p>
-                  <p>The id of an element is unique within a page, so the id selector is used to select one unique element!</p>
-                  <p>To select an element with a specific id, write a hash (#) character, followed by the id of the element.</p>
-                  <div>
-                    <h5>Example</h5>
-                    <span class="code-sec">
-                      <code>
-                        #paragraph1 { <br>
-                        text-align: center; <br>
-                        color: red; <br>
-                        }
-                      </code>
-                    </span>
-                    <p>This CSS rule will be applied to the HTML element with id="para1":</p>
-                  </div>
-                </li>
+              <h4>The CSS element selector</h4>
+              <p>The element selector selects HTML elements based on the element name.</p>
+              <div>
+                <h5>Example</h5>
+                <span class="code-sec">
+                  <code>
+                    p { <br>
+                    text-align: center; <br>
+                    color: red; <br>
+                    }
+                  </code>
+                </span>
+                <p>Here, all < p> elements on the page will be center-aligned, with a red text color</p>
+              </div>
 
-                <li>
-                  <h4>The CSS class selector</h4>
-                  <p>The class selector selects HTML elements with a specific <span class="inline-em">class</span> attribute.</p>
-                  <p>To select elements with a specific class, write a period (.) character, followed by the class name.</p>
-                  <div>
-                    <h5>Example</h5>
-                    <span class="code-sec">
-                      <code>
-                        .bugger { <br>
-                        text-align: center; <br>
-                        color: red; <br>
-                        }
-                      </code>
-                    </span>
-                    <p>The HTML element(s) with <span class="inline-em">class="bugger"</span> will be red and center aligned</p>
-                  </div>
 
-                  <p>More than one class can refer to a HTML element.</p>
-                  <div>
-                    <h5>Example</h5>
-                    <span class="code-sec">
-                      <code>
-                        < p
-                          class="center large" /> This paragraph refers to two classes.< /p>
-                      </code>
-                    </span>
-                    <p>In this example the < p> element will be styled according to <span class="inline-em">class="center"</span> and to <span class="inline-em">class="large"</span></p>
-                  </div>
+              <h4>The CSS id selector</h4>
+              <p>The id selector uses the <span class="inline-em">id</span> attribute of an HTML element to select a specific element.</p>
+              <p>The id of an element is unique within a page, so the id selector is used to select one unique element!</p>
+              <p>To select an element with a specific id, write a hash (#) character, followed by the id of the element.</p>
+              <div>
+                <h5>Example</h5>
+                <span class="code-sec">
+                  <code>
+                    #paragraph1 { <br>
+                    text-align: center; <br>
+                    color: red; <br>
+                    }
+                  </code>
+                </span>
+                <p>This CSS rule will be applied to the HTML element with id="para1":</p>
+              </div>
 
-                  <p>You can also specify that only specific HTML elements should be affected by a class.</p>
-                  <div>
-                    <h5>Example</h5>
-                    <span class="code-sec">
-                      <code>
-                        p.bugger { <br>
-                        text-align: center; <br>
-                        }
-                      </code>
-                    </span>
-                    <p>
-                      < p> element(s) with <span class="inline-em">class="bugger"</span> will be center aligned
-                    </p>
-                </li>
-              </ul>
+
+
+              <h4>The CSS class selector</h4>
+              <p>The class selector selects HTML elements with a specific <span class="inline-em">class</span> attribute.</p>
+              <p>To select elements with a specific class, write a period (.) character, followed by the class name.</p>
+              <div>
+                <h5>Example</h5>
+                <span class="code-sec">
+                  <code>
+                    .bugger { <br>
+                    text-align: center; <br>
+                    color: red; <br>
+                    }
+                  </code>
+                </span>
+                <p>The HTML element(s) with <span class="inline-em">class="bugger"</span> will be red and center aligned</p>
+              </div>
+
+              <p>More than one class can refer to a HTML element.</p>
+              <div>
+                <h5>Example</h5>
+                <span class="code-sec">
+                  <code>
+                    < p
+                      class="center large" /> This paragraph refers to two classes.< /p>
+                  </code>
+                </span>
+                <p>In this example the < p> element will be styled according to <span class="inline-em">class="center"</span> and to <span class="inline-em">class="large"</span></p>
+              </div>
+
+              <p>You can also specify that only specific HTML elements should be affected by a class.</p>
+              <div>
+                <h5>Example</h5>
+                <span class="code-sec">
+                  <code>
+                    p.bugger { <br>
+                    text-align: center; <br>
+                    }
+                  </code>
+                </span>
+                <p>
+                  < p> element(s) with <span class="inline-em">class="bugger"</span> will be center aligned
+                </p>
+
+
             </li>
             <p>Other categories of selectors include:</p>
             <li>
@@ -307,11 +298,10 @@
 
       <section id="css_properties"
         class="main-section">
+        <header>
+          <h2>CSS Properties</h2>
+        </header>
         <article class="">
-          <header>
-            <h2>CSS Properties</h2>
-          </header>
-
           <p>CSS properties are keywords you use to define individual properties of elements</p>
           <p>some of the most popular CSS properties you will come across often includes:</p>
           <ul>
@@ -363,11 +353,10 @@
 
       <section id="adding_css_to_pages"
         class="main-section">
+        <header>
+          <h2>Adding CSS To Pages</h2>
+        </header>
         <article class="">
-          <header>
-            <h2>Adding CSS To Pages</h2>
-          </header>
-
           <p>We use stylesheets to direct browsers on how to display HTML documents.
             But since we mentioned earlier that CSS helped us seperate styles from the structure of our Pages
             the question becomes how do we connect our HTML doc with our stylesheets?</p>
@@ -490,13 +479,13 @@
                       < body><br>
 
                         < h1
-                          style="color:blue;text-align:center;">This is a heading</h1><br>
-                          < p
-                            style="color:red;">This is a paragraph.</p><br>
+                          style="color:blue;text-align:center;">This is a heading< /h1><br>
+                            < p
+                              style="color:red;">This is a paragraph.< /p><br>
 
-                            < /body><br>
+                                < /body><br>
 
-                              < /html>
+                                  < /html>
                   </code>
                 </span>
 
@@ -512,26 +501,98 @@
         <header>
           <h2>CSS Functions</h2>
         </header>
+        <article class="">
+          <p>CSS has several useful functions that give you access to more functionality in styling your pages</p>
+          <p>CSS functions can be passed as values for various CSS properties. one of the most popular CSS function is the var() funtion</p>
+
+          <h3>CSS Variables</h3>
+          <p>The <code>var()</code> function is used to insert the value of a CSS variable.</p>
+          <p>You can create variables with local or global scope,
+            change the variables with JavaScript, and change the variables based on media queries.</p>
+          <p>A good way to use CSS variables is when it comes to the colors of your design.
+            Instead of copy and paste the same colors over and over again, you can place them in variables.</p>
+
+          <h4>The syntax of the <code>var()</code> function is as follows </h4>
+          <code>
+            var(<em>--name, value</em>)
+          </code>
+          <p>The name must begin with two dashes <span class="code-sec">(--)</span> and is case sensitive</p>
+          <ul>
+            <li>
+              <table>
+                <tr>
+                  <td><em>name</em>
+                  </td>
+                  <td>This is required and defines the variable name. (Must start with two dashes)</td>
+                </tr>
+
+            </li>
+            <li>
+              <tr>
+                <td>
+                  <em>values</em>
+                </td>
+                <td>This is optional and is the fallback value to be used if the variable is not found</td>
+              </tr>
+              </table>
+            </li>
+          </ul>
+
+          <h3>How var() works</h3>
+          <p>First of all: CSS variables can have a global or local scope.</p>
+          <p>Global variables can be accessed/used through the entire document,
+            while local variables can be used only inside the selector where it is declared.</p>
+          <p>To create a variable with global scope, declare it inside
+            the <code>:root</code> selector. The <code>:root</code> selector matches the document's root element.</p>
+          <p>To create a variable with local scope, declare it inside the selector that is going to use it.</p>
+
+          <div class="">
+            <h5>Example</h5>
+            <span>
+              <code>
+                :root {<br>
+                --blue: #1e90ff;<br>
+                --white: #ffffff;<br>
+                }<br>
+
+                body { background-color: var(--blue); }<br>
+
+                h2 { border-bottom: 2px solid var(--blue); }<br>
+
+                .container {<br>
+                color: var(--blue);<br>
+                background-color: var(--white);<br>
+                padding: 15px;<br>
+                }<br>
+
+                button {<br>
+                background-color: var(--white);<br>
+                color: var(--blue);<br>
+                border: 1px solid var(--blue);<br>
+                padding: 5px;<br>
+                }
+              </code>
+            </span>
+
+          </div>
+
+          <h3>Advantages of using var()</h3>
+          <ul>
+            <li>Makes the code easier to read</li>
+            <li>Makes it much easier to change the property values</li>
+          </ul>
+
+          <p>Click <a href="https://www.w3schools.com/css/css3_variables.asp">here</a> to learn more</p>
+        </article>
       </section>
 
-      <section id="css_effects"
-        class="main-section">
-        <header>
-          <h2>CSS Effects</h2>
-        </header>
-      </section>
-      <section id="media_queries"
-        class="main-section">
-        <header>
-          <h2>Media Queries</h2>
-        </header>
-      </section>
 
       <section id="references"
         class="main-section">
         <header>
           <h2>References</h2>
         </header>
+        <p>Most texts and examples used in this documentation is from <a href="https://www.w3schools.com/css">w3schools</a> </p>
       </section>
 
     </main>
