@@ -79,13 +79,13 @@
           <h2>Syntax</h2>
         </header>
         <article class="">
-          <span>
+          <span class="text-img">
             <p>h1</p>
             <p>{color: blue; text-align: center;}</p>
           </span>
 
           <h4>The CSS syntax</h4>
-          <p>CSS syntax is made up of the following parts</p>
+          <p>A CSS rule is made up of the following syntax and parts</p>
           <ul>
             <li>a selector</li>
             <li>a declaration</li>
@@ -228,71 +228,75 @@
             <li><a href="https://www.w3schools.com/css/css_attribute_selectors.asp">Attribute Selectors</a> (select elements based on an attribute or attribute value)</li>
           </ul>
           <h4>All the simple CSS selectors</h4>
-          <table>
-            <tr>
-              <th>Selector</th>
-              <th>Example</th>
-              <th>Exanple description</th>
-            </tr>
+          <div class="table-wrapper">
 
-            <tr>
-              <td>
-                <em>
-                  <a href="https://www.w3schools.com/cssref/sel_id.asp">#id</a>
-                </em>
-              </td>
-              <td>#navbar</td>
-              <td>Selects the element with id= "navbar"</td>
-            </tr>
-            <tr>
-              <td>
-                <em>
-                  <a href="https://www.w3schools.com/cssref/sel_class.asp">.class</a>
-                </em>
-              </td>
-              <td>.body-link</td>
-              <td>Selects all the elements with class="body-link"</td>
-            </tr>
-            <tr>
-              <td>
-                <em>
-                  <a href="https://www.w3schools.com/cssref/sel_element_class.asp">element.class</a>
-                </em>
-              </td>
-              <td>p.intro </td>
-              <td>Selects only the <code>
-                  < p>
-                </code> elements with the class="intro" </td>
-            </tr>
-            <tr>
-              <td>
-                <em>
-                  <a href="https://www.w3schools.com/cssref/sel_all.asp">*</a>
-                </em>
-              </td>
-              <td>*</td>
-              <td>Selects all elements</td>
-            </tr>
-            <tr>
-              <td>
-                <em>
-                  <a href="https://www.w3schools.com/cssref/sel_element.asp">element</a>
-                </em>
-              </td>
-              <td>p</td>
-              <td>Select all < p> elements</td>
-            </tr>
+            <table>
+              <caption>Table showing the simple CSS selectors</caption>
+              <tr>
+                <th>Selector</th>
+                <th>Example</th>
+                <th>Exanple description</th>
+              </tr>
 
-            <tr>
-              <td>
-                <em>
-                  <a href="https://www.w3schools.com/cssref/sel_element_comma.asp">element,element,...</a>
-                </em>
-              </td>
-              <td>div,p</td>
-              <td>Selects all < div> elements and all < p> elements</td>
-            </tr>
-          </table>
+              <tr>
+                <td>
+                  <em>
+                    <a href="https://www.w3schools.com/cssref/sel_id.asp">#id</a>
+                  </em>
+                </td>
+                <td>#navbar</td>
+                <td>Selects the element with id= "navbar"</td>
+              </tr>
+              <tr>
+                <td>
+                  <em>
+                    <a href="https://www.w3schools.com/cssref/sel_class.asp">.class</a>
+                  </em>
+                </td>
+                <td>.body-link</td>
+                <td>Selects all the elements with class="body-link"</td>
+              </tr>
+              <tr>
+                <td>
+                  <em>
+                    <a href="https://www.w3schools.com/cssref/sel_element_class.asp">element.class</a>
+                  </em>
+                </td>
+                <td>p.intro </td>
+                <td>Selects only the <code>
+                    < p>
+                  </code> elements with the class="intro" </td>
+              </tr>
+              <tr>
+                <td>
+                  <em>
+                    <a href="https://www.w3schools.com/cssref/sel_all.asp">*</a>
+                  </em>
+                </td>
+                <td>*</td>
+                <td>Selects all elements</td>
+              </tr>
+              <tr>
+                <td>
+                  <em>
+                    <a href="https://www.w3schools.com/cssref/sel_element.asp">element</a>
+                  </em>
+                </td>
+                <td>p</td>
+                <td>Select all < p> elements</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <em>
+                    <a href="https://www.w3schools.com/cssref/sel_element_comma.asp">element,element,...</a>
+                  </em>
+                </td>
+                <td>div,p</td>
+                <td>Selects all < div> elements and all < p> elements</td>
+              </tr>
+            </table>
+          </div>
         </article>
       </section>
 
@@ -512,38 +516,33 @@
           <p>A good way to use CSS variables is when it comes to the colors of your design.
             Instead of copy and paste the same colors over and over again, you can place them in variables.</p>
 
-          <h4>The syntax of the <code>var()</code> function is as follows </h4>
+          <h4>The syntax of the <code>var()</code> function is as follows: </h4>
           <code>
             var(<em>--name, value</em>)
           </code>
-          <p>The name must begin with two dashes <span class="code-sec">(--)</span> and is case sensitive</p>
-          <ul>
-            <li>
-              <table>
-                <tr>
-                  <td><em>name</em>
-                  </td>
-                  <td>This is required and defines the variable name. (Must start with two dashes)</td>
-                </tr>
+          <p>The name must begin with two dashes <span class="inline-em">(--)</span> and is case sensitive</p>
 
-            </li>
-            <li>
-              <tr>
-                <td>
-                  <em>values</em>
-                </td>
-                <td>This is optional and is the fallback value to be used if the variable is not found</td>
-              </tr>
-              </table>
-            </li>
-          </ul>
+          <table>
+            <tr>
+              <td><em>name</em>
+              </td>
+              <td>This is required and defines the variable name. (Must start with two dashes)</td>
+            </tr>
+            <tr>
+              <td>
+                <em>values</em>
+              </td>
+              <td>This is optional and is the fallback value to be used if the variable is not found</td>
+            </tr>
+          </table>
+
 
           <h3>How var() works</h3>
           <p>First of all: CSS variables can have a global or local scope.</p>
           <p>Global variables can be accessed/used through the entire document,
             while local variables can be used only inside the selector where it is declared.</p>
           <p>To create a variable with global scope, declare it inside
-            the <code>:root</code> selector. The <code>:root</code> selector matches the document's root element.</p>
+            the <span class="inline-em"> <code>:root</code></span> selector. The <span class="inline-em"> <code>:root</code></span> selector matches the document's root element.</p>
           <p>To create a variable with local scope, declare it inside the selector that is going to use it.</p>
 
           <div class="">
@@ -596,7 +595,10 @@
       </section>
 
     </main>
-
+    <a id="top-anchor"
+      href="#">Back to top</a>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
+      charset="utf-8"></script>
   </body>
 
 </html>
